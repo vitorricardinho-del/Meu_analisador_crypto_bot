@@ -26,7 +26,7 @@ moedas_ja_mostradas = []
 
 def buscar_dados_binance(symbol, interval="1h", limit=50):
     """Busca o histórico de velas na API da Binance"""
-    url = "https://api1.binance.com/api/v3/klines"
+    url = "https://api2.binance.com/api/v3/klines"
     params = {"symbol": symbol, "interval": interval, "limit": limit}
     try:
         response = requests.get(url, params=params)
