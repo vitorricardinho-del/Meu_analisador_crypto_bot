@@ -1,4 +1,4 @@
 requests==2.32.3
-pandas==2.2.2
+pandas>=2.2.3
 pyTelegramBotAPI==4.26.0
 schedule==1.2.2
