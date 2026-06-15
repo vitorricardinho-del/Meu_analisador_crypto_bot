@@ -1,9 +1,8 @@
 import requests
 import pandas as pd
 
-# ⚠️ COLE AQUI AS SUAS CHAVES DO TELEGRAM
-TOKEN_TELEGRAM = "8208992176:AAE9DvaosgaH6Yyx0xUaui5J0jYJ6U8VIGI"
-CHAT_ID_TELEGRAM = "8336469634"
+TOKEN_TELEGRAM = "TOKEN_TELEGRAM"
+CHAT_ID_TELEGRAM = "CHAT_ID_TELEGRAM"
 
 def enviar_mensagem_telegram(mensagem):
     """Envia uma notificação formatada direto para o seu Telegram"""
