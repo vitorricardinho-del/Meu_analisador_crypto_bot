@@ -29,7 +29,7 @@ def buscar_dados_binance(symbol, interval="1h", limit=50):
     url = "https://api3.binance.com/api/v3/klines"
     params = {"symbol": symbol, "interval": interval, "limit": limit}
     try:
-        response = requests.get(url, params=params)
+        response = requests.get(url, params=params, verify=False)
         if response.status_code == 400:
             return None
             
@@ -50,7 +50,7 @@ def buscar_forca_livro_ofertas(symbol):
     url = "https://api.binance.com/api/v3/depth"
     params = {"symbol": symbol, "limit": 20}
     try:
-        response = requests.get(url, params=params)
+        response = requests.get(url, params=params, verify=False)
         if response.status_code != 200:
             return 50.0, 50.0
             
@@ -79,7 +79,7 @@ def obter_maiores_quedas_24h(resetar_memoria=False):
         
     url = "https://api1.binance.com/api/v3/ticker/24hr"
     try:
-        response = requests.get(url)
+        response = requests.get(url, verify=False)
         if response.status_code != 200:
             return "❌ Erro ao conectar com o painel de tickers da Binance."
             
