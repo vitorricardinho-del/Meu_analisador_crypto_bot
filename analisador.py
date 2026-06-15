@@ -26,7 +26,7 @@ moedas_ja_mostradas = []
 
 def buscar_dados_binance(symbol, interval="1h", limit=50):
     """Busca o histórico de velas na API da Binance"""
-    url = "https://api3.binance.com/api/v3/klines"
+    url = "https://api.binance.com/api/v3/klines"
     params = {"symbol": symbol, "interval": interval, "limit": limit}
     try:
         response = requests.get(url, params=params, verify=False)
@@ -77,7 +77,7 @@ def obter_maiores_quedas_24h(resetar_memoria=False):
     if resetar_memoria:
         moedas_ja_mostradas = []
         
-    url = "https://api1.binance.com/api/v3/ticker/24hr"
+    url = "https://api.binance.com/api/v3/ticker/24hr"
     try:
         response = requests.get(url, verify=False)
         if response.status_code != 200:
